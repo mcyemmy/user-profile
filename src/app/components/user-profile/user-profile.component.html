@@ -1,0 +1,17 @@
+<section>
+    <div *ngFor="let user of users" (click)="visitLinkedPage(user.website)" class="user-card col-3">
+      <div>
+        <span>User {{user.id}}</span>
+      </div>
+      <div>
+        <span>Name: {{user.name}}</span>
+        <span>Email: {{user.email}}</span>
+        <span>Ph no: {{user.phone}}</span>
+      </div>
+      <div>
+        <span>User's Geo location details:</span>
+        <span>{{getGeoLocation(user.address.geo.lat, user.address.geo.lng)}}</span>
+      </div>
+    </div>
+  </section>
+  
